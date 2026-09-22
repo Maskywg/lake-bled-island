@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>數位策展深旅・布萊德湖許願島（聖母升天教堂）深度走讀</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Serif+TC:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    .font-serif-tc { font-family: 'Noto Serif TC', Georgia, serif; }
+    .font-cinzel { font-family: 'Cinzel', serif; }
+    
+    .hero-bg {
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.92)), url('bled_island_aerial.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .bell-rope {
+      transform-origin: top center;
+      transition: transform 0.2s ease-in-out;
+    }
+    .bell-rope.pull {
+      animation: pullRope 1.2s ease-in-out;
+    }
+    @keyframes pullRope {
+      0% { transform: translateY(0) scaleY(1); }
+      30% { transform: translateY(28px) scaleY(1.15); }
+      60% { transform: translateY(-10px) scaleY(0.95); }
+      80% { transform: translateY(5px) scaleY(1.02); }
+      100% { transform: translateY(0) scaleY(1); }
+    }
+
+    .gold-shimmer {
+      background: linear-gradient(135deg, #fef08a 0%, #d97706 50%, #b45309 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-stone-900 text-stone-200 antialiased selection:bg-amber-500 selection:text-stone-950">
+
+  <!-- 頂部導航 -->
+  <header class="sticky top-0 z-50 bg-stone-950/90 backdrop-blur-md border-b border-stone-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="text-2xl">🔔</span>
+        <div>
+          <span class="font-serif-tc font-bold text-base sm:text-lg tracking-wide text-amber-400">布萊德湖許願島</span>
+          <span class="text-xs text-stone-400 font-mono hidden md:inline-block ml-2">Blejski Otok & Cerkev Marijinega vnebovzetja</span>
+        </div>
+      </div>
+      <nav class="flex space-x-3 sm:space-x-6 text-xs sm:text-sm font-medium text-stone-300">
+        <a href="#interactive-bell" class="hover:text-amber-400 transition-colors flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          敲響許願鐘
+        </a>
+        <a href="#gallery" class="hover:text-amber-400 transition-colors">實景圖輯</a>
+        <a href="#narrative" class="hover:text-amber-400 transition-colors">深度論述</a>
+        <a href="#chronology" class="hover:text-amber-400 transition-colors">歷史年表</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero 旗艦主視覺 -->
+  <section class="relative hero-bg text-white py-24 sm:py-32 px-4 sm:px-6 border-b border-stone-800">
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-semibold tracking-wider uppercase mb-6 backdrop-blur-md">
+        <span>數位策展深旅・極東義大利與斯洛維尼亞跨境文化專題</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif-tc font-black tracking-tight text-stone-100 mb-6 leading-tight drop-shadow-lg">
+        阿爾卑斯冰川鏡湖中的聖境之島<br>
+        <span class="gold-shimmer font-cinzel text-2xl sm:text-4xl md:text-5xl font-bold tracking-normal mt-2 block">
+          Church of the Assumption on Bled Island
+        </span>
+      </h1>
+      
+      <p class="text-base sm:text-lg md:text-xl text-stone-300 max-w-3xl mx-auto font-serif-tc font-light leading-relaxed mb-10 text-stone-200/90 drop-shadow">
+        從斯拉夫神話中愛與豐饒女神芝娃（Živa）的遠古聖域，到 1534 年教宗賜予的傳奇許願鐘。<br class="hidden sm:inline">
+        這座斯洛維尼亞唯一的天然島嶼，以 99 階巴洛克石階、52 米高聳鐘樓與無動力 Pletna 搖櫓船，封存了千年的靈性與愛之誓約。
+      </p>
+
+      <!-- 快速指標看板 -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+        <div class="p-4 bg-stone-950/75 backdrop-blur-md rounded-xl border border-stone-800 hover:border-amber-500/50 transition">
+          <div class="text-amber-400 text-xs font-mono uppercase">古老階梯</div>
+          <div class="text-lg font-bold text-stone-100 mt-1">99 階天梯</div>
+          <div class="text-[11px] text-stone-400 mt-0.5">1655 年巴洛克石構・新娘不落地考驗</div>
+        </div>
+        <div class="p-4 bg-stone-950/75 backdrop-blur-md rounded-xl border border-stone-800 hover:border-amber-500/50 transition">
+          <div class="text-amber-400 text-xs font-mono uppercase">傳奇之聲</div>
+          <div class="text-lg font-bold text-stone-100 mt-1">1534 許願鐘</div>
+          <div class="text-[11px] text-stone-400 mt-0.5">教宗克萊孟七世賜贈・親拉繩祈願</div>
+        </div>
+        <div class="p-4 bg-stone-950/75 backdrop-blur-md rounded-xl border border-stone-800 hover:border-amber-500/50 transition">
+          <div class="text-amber-400 text-xs font-mono uppercase">天際地標</div>
+          <div class="text-lg font-bold text-stone-100 mt-1">52 米獨立鐘樓</div>
+          <div class="text-[11px] text-stone-400 mt-0.5">15 世紀初建・巴洛克雙層穹頂</div>
+        </div>
+        <div class="p-4 bg-stone-950/75 backdrop-blur-md rounded-xl border border-stone-800 hover:border-amber-500/50 transition">
+          <div class="text-amber-400 text-xs font-mono uppercase">無形文化遺產</div>
+          <div class="text-lg font-bold text-stone-100 mt-1">世襲 Pletna 木船</div>
+          <div class="text-[11px] text-stone-400 mt-0.5">18 世紀特蕾莎女皇特許・零碳水上航渡</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 沉浸式互動模組：敲響許願鐘 (Web Audio API Synthesized Bell) -->
+  <section id="interactive-bell" class="max-w-5xl mx-auto px-4 sm:px-6 -mt-8 relative z-20">
+    <div class="bg-gradient-to-br from-stone-900 to-stone-950 border-2 border-amber-500/40 rounded-3xl p-6 sm:p-10 shadow-2xl shadow-amber-950/30">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+        
+        <!-- 左側：敲鐘儀式操作區 -->
+        <div class="w-full lg:w-1/2 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <span>🔔 聲景體驗・Soundscape Interaction</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-serif-tc font-bold text-stone-100 mb-3">
+            親手拉響五百年「許願鐘」
+          </h2>
+          <p class="text-sm text-stone-400 leading-relaxed mb-6 font-serif-tc">
+            走進中殿中央，仰望懸垂自拱頂的麻繩。傳說只要誠心默念願望並親手連敲三響，聖母與教宗克萊孟七世的祝福便會隨鐘聲迴盪於阿爾卑斯湖谷。
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+            <button id="ring-btn" onclick="ringWishingBell()" class="px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-bold rounded-2xl shadow-lg shadow-amber-500/20 active:scale-95 transition flex items-center gap-3 text-base sm:text-lg">
+              <span class="text-2xl">🔔</span>
+              <span>拉繩敲鐘 (Ring the Bell)</span>
+            </button>
+            <div class="text-xs font-mono text-stone-400 bg-stone-800/80 px-4 py-3 rounded-xl border border-stone-700">
+              已敲響次數：<span id="bell-count" class="text-amber-400 font-bold text-sm">0</span> 次
+            </div>
+          </div>
+          <p id="bell-feedback" class="text-xs text-amber-300/80 mt-3 italic h-4"></p>
+        </div>
+
+        <!-- 右側：鐘繩動態與傳說對照 -->
+        <div class="w-full lg:w-1/2 bg-stone-950/80 p-6 rounded-2xl border border-stone-800">
+          <div class="flex items-center justify-center mb-4">
+            <div id="rope-graphic" class="bell-rope flex flex-col items-center">
+              <div class="w-12 h-10 bg-amber-500/20 border-2 border-amber-400 rounded-t-full flex items-center justify-center text-amber-300 text-lg font-bold">
+                🕭
+              </div>
+              <div class="w-1.5 h-28 bg-gradient-to-b from-amber-600 to-amber-800 rounded-full my-1"></div>
+              <div class="w-5 h-5 bg-amber-600 rounded-full shadow-md"></div>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-3 text-xs text-stone-300 pt-3 border-t border-stone-800/80">
+            <div class="bg-stone-900/90 p-3 rounded-lg border border-stone-800">
+              <div class="text-amber-400 font-bold mb-1">🌊 湖底沉鐘傳說</div>
+              <p class="text-[11px] text-stone-400 leading-snug">
+                16 世紀城堡遺孀 Poliksena 為悼念亡夫鑄鐘，遭風暴沉入湖底。相傳無瑕之人於暴風雨夜仍可聽見湖底鳴響。
+              </p>
+            </div>
+            <div class="bg-stone-900/90 p-3 rounded-lg border border-stone-800">
+              <div class="text-amber-400 font-bold mb-1">📜 教宗克萊孟七世贈鐘</div>
+              <p class="text-[11px] text-stone-400 leading-snug">
+                教宗感念寡婦虔誠，於 1534 年命帕多瓦工匠重鑄銅鐘送往布萊德島，賦予「敲響三聲即獲所求」之神聖儀式。
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 主內容區 -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-24">
+
+    <!-- 模組一：實景圖輯與空間走讀 (Photo Gallery) -->
+    <section id="gallery" class="scroll-mt-24">
+      <div class="border-l-4 border-amber-500 pl-4 mb-8">
+        <span class="text-xs font-mono uppercase text-amber-400 tracking-wider">Spatial & Archival Visuals</span>
+        <h2 class="text-2xl sm:text-3xl font-serif-tc font-bold text-stone-100">實景走讀圖輯：神聖島嶼的空間構造</h2>
+        <p class="text-sm text-stone-400 mt-1">從湖畔登船、99 階天梯登頂到巴洛克金色祭壇的完整空間維度</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 照片 1：湖心島與阿爾卑斯全景 -->
+        <div class="bg-stone-950 rounded-2xl overflow-hidden border border-stone-800 group hover:border-amber-500/40 transition flex flex-col">
+          <div class="overflow-hidden relative h-56">
+            <img src="bled_island_aerial.jpg" alt="布萊德湖許願島全景" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute bottom-2 left-2 bg-stone-900/90 text-amber-300 text-xs px-2.5 py-1 rounded backdrop-blur-sm border border-stone-700">冰川鏡湖與島嶼</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif-tc font-bold text-stone-100 text-base mb-1">阿爾卑斯冰川鏡湖中的孤島</h3>
+              <p class="text-[11px] text-stone-400 font-mono mb-2">Glacial Lake Bled & Islet</p>
+              <p class="text-xs text-stone-300 leading-relaxed font-serif-tc">
+                湖泊長 2.12 公里、深達 30 公尺，由伯興冰川（Bohinj Glacier）侵蝕而成。這座天然島嶼如綠翡翠般浮於清澈泉水之上。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 照片 2：99 階巴洛克南側大階梯 -->
+        <div class="bg-stone-950 rounded-2xl overflow-hidden border border-stone-800 group hover:border-amber-500/40 transition flex flex-col">
+          <div class="overflow-hidden relative h-56">
+            <img src="bled_island_staircase.jpg" alt="99 階南側大階梯" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute bottom-2 left-2 bg-stone-900/90 text-amber-300 text-xs px-2.5 py-1 rounded backdrop-blur-sm border border-stone-700">儀式之梯</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif-tc font-bold text-stone-100 text-base mb-1">99 階南側石階（1655 年）</h3>
+              <p class="text-[11px] text-stone-400 font-mono mb-2">South Monumental Staircase</p>
+              <p class="text-xs text-stone-300 leading-relaxed font-serif-tc">
+                直通教堂中殿的大階梯。依據古老習俗，新郎必須抱著新娘一口氣攀登 99 階，且雙方全程不得開口，象徵永恆忠貞與幸福。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 照片 3：傳統無動力木船 Pletna -->
+        <div class="bg-stone-950 rounded-2xl overflow-hidden border border-stone-800 group hover:border-amber-500/40 transition flex flex-col">
+          <div class="overflow-hidden relative h-56">
+            <img src="pletna_boat.jpg" alt="傳統 Pletna 搖櫓船" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute bottom-2 left-2 bg-stone-900/90 text-amber-300 text-xs px-2.5 py-1 rounded backdrop-blur-sm border border-stone-700">世襲航渡工藝</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif-tc font-bold text-stone-100 text-base mb-1">百年世襲 Pletna 平底搖櫓船</h3>
+              <p class="text-[11px] text-stone-400 font-mono mb-2">Traditional Pletna Boatmanship</p>
+              <p class="text-xs text-stone-300 leading-relaxed font-serif-tc">
+                船伕（Pletnar）站立於船尾以雙槳划行，技術世代單傳。堅持不裝設任何馬達引擎，維持布萊德湖水質的極致純淨與平靜。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 照片 4：敲響許願鐘儀式 -->
+        <div class="bg-stone-950 rounded-2xl overflow-hidden border border-stone-800 group hover:border-amber-500/40 transition flex flex-col">
+          <div class="overflow-hidden relative h-56">
+            <img src="wishing_bell_altar.jpg" alt="中殿敲鐘許願現場" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute bottom-2 left-2 bg-stone-900/90 text-amber-300 text-xs px-2.5 py-1 rounded backdrop-blur-sm border border-stone-700">朝聖祈願</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif-tc font-bold text-stone-100 text-base mb-1">中殿許願繩與朝聖現場</h3>
+              <p class="text-[11px] text-stone-400 font-mono mb-2">Ringing the Wishing Bell</p>
+              <p class="text-xs text-stone-300 leading-relaxed font-serif-tc">
+                繩索垂掛於主祭壇前中央走道，每一位走入教堂的旅人皆親自拉繩。鐘聲直接穿透屋頂木桁架，響徹湖岸。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 照片 5：金色主祭壇（1747 年） -->
+        <div class="bg-stone-950 rounded-2xl overflow-hidden border border-stone-800 group hover:border-amber-500/40 transition flex flex-col">
+          <div class="overflow-hidden relative h-56">
+            <img src="church_main_altar.jpg" alt="巴洛克金色主祭壇" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute bottom-2 left-2 bg-stone-900/90 text-amber-300 text-xs px-2.5 py-1 rounded backdrop-blur-sm border border-stone-700">巴洛克金雕</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif-tc font-bold text-stone-100 text-base mb-1">巴洛克金色主祭壇（1747 年）</h3>
+              <p class="text-[11px] text-stone-400 font-mono mb-2">High Baroque Golden Altar</p>
+              <p class="text-xs text-stone-300 leading-relaxed font-serif-tc">
+                中央供奉聖母瑪利亞木雕聖像，兩側立有亨利二世皇帝與庫妮貢德皇后的華麗雕像，展現哈布斯堡時代的宗教藝術巔峰。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 照片 6：懸崖城堡與湖中島遠眺 -->
+        <div class="bg-stone-950 rounded-2xl overflow-hidden border border-stone-800 group hover:border-amber-500/40 transition flex flex-col">
+          <div class="overflow-hidden relative h-56">
+            <img src="bled_castle_island_view.jpg" alt="城堡與島嶼遠眺" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute bottom-2 left-2 bg-stone-900/90 text-amber-300 text-xs px-2.5 py-1 rounded backdrop-blur-sm border border-stone-700">山水與要塞</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif-tc font-bold text-stone-100 text-base mb-1">布萊德城堡與千仞懸崖</h3>
+              <p class="text-[11px] text-stone-400 font-mono mb-2">Bled Castle & Lake Overlook</p>
+              <p class="text-xs text-stone-300 leading-relaxed font-serif-tc">
+                西元 1004 年神聖羅馬皇帝亨利二世將此地封予布里克森主教。聳立於 130 米懸崖上的中世紀要塞，千年來守望著湖心聖島。
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 模組二：深度歷史與文化論述 (Deep Narrative) -->
+    <section id="narrative" class="space-y-16 scroll-mt-24">
+      <div class="border-l-4 border-amber-500 pl-4 mb-8">
+        <span class="text-xs font-mono uppercase text-amber-400 tracking-wider">Historical & Curatorial Essay</span>
+        <h2 class="text-2xl sm:text-3xl font-serif-tc font-bold text-stone-100">深度論述：靈性層疊、儀式聲景與阿爾卑斯療養地景</h2>
+      </div>
+
+      <!-- 章節 1：神聖空間的層疊 -->
+      <article class="bg-stone-950/70 p-6 sm:p-8 rounded-3xl border border-stone-800 space-y-4">
+        <div class="flex items-center gap-3 text-amber-400 text-sm font-mono">
+          <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800">CHAPTER I</span>
+          <span>SACRED STRATIGRAPHY</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-serif-tc font-bold text-stone-100">
+          一、 空間層疊：從斯拉夫愛之女神「芝娃（Živa）」到聖母升天
+        </h3>
+        <div class="prose prose-invert max-w-none text-stone-300 text-sm sm:text-base leading-relaxed space-y-4 font-serif-tc">
+          <p>
+            在基督教文明深入茱莉安阿爾卑斯山區之前，布萊德島早已是早期斯拉夫民族心目中的神聖聖所。根據斯洛維尼亞國家詩人普列舍仁（France Prešeren）在敘事史詩《薩維察河畔的洗禮》（<em class="text-amber-300">Krst pri Savici</em>）中的描寫，這座島嶼原先供奉著斯拉夫神話中掌管生命、生育、穀物繁衍與愛情的**芝娃女神（Goddess Živa）**。
+          </p>
+          <p>
+            20 世紀中葉的現代考古發掘證實了這一歷史脈絡：考古學家在教堂地基之下，發掘出西元 9 至 11 世紀的 **124 座古斯拉夫石砌墓葬**，並發現了羅馬時代與前基督教時期的神殿石基。當西元 8 世紀卡蘭塔尼亞（Carantania）斯拉夫人皈依基督教時，教會並未摧毀這座天然島嶼的靈性記憶，而是順應原有的母性崇拜，將異教愛神聖殿轉化為獻給**聖母瑪利亞（同樣象徵母性包容、生養與恩典）**的升天教堂。
+          </p>
+        </div>
+      </article>
+
+      <!-- 章節 2：建築演進與巴洛克金雕 -->
+      <article class="bg-stone-950/70 p-6 sm:p-8 rounded-3xl border border-stone-800 space-y-4">
+        <div class="flex items-center gap-3 text-amber-400 text-sm font-mono">
+          <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800">CHAPTER II</span>
+          <span>ARCHITECTURAL METAMORPHOSIS</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-serif-tc font-bold text-stone-100">
+          二、 建築型制流變：哥德式壁畫與 17 世紀大地震後的巴洛克重塑
+        </h3>
+        <div class="prose prose-invert max-w-none text-stone-300 text-sm sm:text-base leading-relaxed space-y-4 font-serif-tc">
+          <p>
+            布萊德島上的教堂歷經了多次災難與重生。西元 1142 年，首座羅曼式三殿巴西利卡在此落成；西元 1465 年，在盧比亞納首任主教 Žiga Lamberg 的主持下，教堂改建為單中殿哥德式風格，並由克拉尼（Kranj）的匿名大師繪製了描繪聖母生平與基督受難的精緻濕壁畫（現仍局部保存在長老席後殿牆面上）。
+          </p>
+          <p>
+            西元 1511 年與 1688 年，強烈地震接連重創教堂。1698 年，教堂全面以盛期**巴洛克風格**進行重建，形成了今日所見的優雅立面與內部結構：
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-stone-300 text-sm pl-2">
+            <li><strong class="text-amber-300">金色主祭壇（1747 年）</strong>：由盧比亞納著名巴洛克雕刻家製作，以深邃金漆與黑色大理石紋雕塑裝飾，兩側侍立著將布萊德賜給教會的神聖羅馬皇帝亨利二世與其妻子聖庫妮貢德（Cunigunde）。</li>
+            <li><strong class="text-amber-300">52 米獨立鐘樓（Campanile）</strong>：建於 15 世紀末，頂部擁有典型的巴洛克雙層銅頂穹窿，內置精密的機械齒輪鐘與觀景台。</li>
+            <li><strong class="text-amber-300">隱密地下禮拜堂（Crypt）</strong>：保存了羅曼式石材柱頭與早期朝聖者的歷史刻痕。</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 章節 3：儀式通道與傳統民俗 -->
+      <article class="bg-stone-950/70 p-6 sm:p-8 rounded-3xl border border-stone-800 space-y-4">
+        <div class="flex items-center gap-3 text-amber-400 text-sm font-mono">
+          <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800">CHAPTER III</span>
+          <span>RITUALS & FOLKLORE</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-serif-tc font-bold text-stone-100">
+          三、 儀式通道與傳統技藝：99 階天梯考驗與世襲 Pletna 船伕
+        </h3>
+        <div class="prose prose-invert max-w-none text-stone-300 text-sm sm:text-base leading-relaxed space-y-4 font-serif-tc">
+          <p>
+            布萊德島之所以深入人心，在於它將「空間移動」昇華為高度參與性的文化儀式：
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 my-4">
+            <div class="bg-stone-900 p-5 rounded-2xl border border-stone-800">
+              <h4 class="text-amber-400 font-bold text-base mb-2">🪜 99 階新婚試煉（The 99 Steps Challenge）</h4>
+              <p class="text-xs text-stone-300 leading-relaxed">
+                自 1655 年南側大階梯建成以來，這條直達天堂的石階便成為斯洛維尼亞最嚴苛的婚禮儀式：新郎必須抱起新娘全程步行登頂，而新娘在整個過程中必須保持絕對沉默。若新郎順利登頂且新娘未發一語，象徵兩人未來的婚姻生活將堅如磐石、幸福綿長。
+              </p>
+            </div>
+            <div class="bg-stone-900 p-5 rounded-2xl border border-stone-800">
+              <h4 class="text-amber-400 font-bold text-base mb-2">🛶 世襲 Pletna 搖櫓工藝（The Pletnar Guild）</h4>
+              <p class="text-xs text-stone-300 leading-relaxed">
+                Pletna 是布萊德湖專屬的平底遮陽木船，船型源自奧地利平底駁船。18 世紀奧地利女皇瑪麗亞·特蕾莎為補償貧瘠農民，頒布特許狀將渡船權授予湖畔 Mlino 村的少數家族。這項特權至今仍為嚴格的父子世襲制，船伕以特有的雙手直立划槳技術（Stehrudder），終身守護湖泊純淨。
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 章節 4：飲食文化與國家符號 -->
+      <article class="bg-stone-950/70 p-6 sm:p-8 rounded-3xl border border-stone-800 space-y-4">
+        <div class="flex items-center gap-3 text-amber-400 text-sm font-mono">
+          <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800">CHAPTER IV</span>
+          <span>GASTRONOMY & IDENTITY</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-serif-tc font-bold text-stone-100">
+          四、 斯洛維尼亞國寶甜點 Potica 與島上烘焙工坊 Potičnica
+        </h3>
+        <div class="prose prose-invert max-w-none text-stone-300 text-sm sm:text-base leading-relaxed space-y-4 font-serif-tc">
+          <p>
+            登上布萊德島，除了敲鐘祈福外，最具代表性的味覺記憶莫過於島上的 **Potičnica（波提察烘焙之家）**。
+          </p>
+          <p>
+            <strong class="text-amber-300">Potica（波提察）</strong> 是斯洛維尼亞最具代表性的傳統節慶糕點，採用特殊的圓形帶孔陶模（Potičnik）烘烤。發酵麵團擀成薄片後，均勻塗抹核桃、龍艾（Tarragon）、罌粟籽或蜂蜜起司等餡料，捲成如年輪般的環形。在島上，這道糕點象徵著家庭團圓、阿爾卑斯農家的勤奮與節慶祝福。
+          </p>
+        </div>
+      </article>
+
+      <!-- 章節 5：阿爾卑斯療養與地緣政治 -->
+      <article class="bg-stone-950/70 p-6 sm:p-8 rounded-3xl border border-stone-800 space-y-4">
+        <div class="flex items-center gap-3 text-amber-400 text-sm font-mono">
+          <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800">CHAPTER V</span>
+          <span>GEOPOLITICS & NATURE CURE</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-serif-tc font-bold text-stone-100">
+          五、 19 世紀自然療法先驅 Arnold Rikli 到南斯拉夫國賓地景
+        </h3>
+        <div class="prose prose-invert max-w-none text-stone-300 text-sm sm:text-base leading-relaxed space-y-4 font-serif-tc">
+          <p>
+            布萊德從中世紀純粹的朝聖島嶼，轉型為現代國際度假勝地，關鍵在於 1855 年瑞士自然療法先驅 **阿諾·里克利（Arnold Rikli）** 的到來。里克利發現布萊德湖具備獨特的阿爾卑斯高山微氣候、清澈純淨的冰川泉水與溫和日光，在此建立了日光水療養生所，吸引全歐洲貴族皇室前來靜養。
+          </p>
+          <p>
+            進入 20 世紀後，南斯拉夫卡拉喬傑維奇王室在此建立夏宮；南斯拉夫聯邦總統鐵托（Josip Broz Tito）亦在此修建湖畔國賓別墅（現為 Vila Bled），曾接待過英女王伊麗莎白二世、印度總理尼赫魯等各國政要。布萊德湖許願島也因此從宗教朝聖地，淬煉為現代斯洛維尼亞的主權與文化形象門面。
+          </p>
+        </div>
+      <!-- 章節 6：區域宗教信仰演變（從古羅馬至現代） -->
+      <article class="bg-stone-950/70 p-6 sm:p-8 rounded-3xl border border-stone-800 space-y-4">
+        <div class="flex items-center gap-3 text-amber-400 text-sm font-mono">
+          <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800">CHAPTER VI</span>
+          <span>RELIGIOUS EVOLUTION SINCE ROMAN ANTIQUITY</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-serif-tc font-bold text-stone-100">
+          六、 兩千年信仰光譜：從羅馬多神、斯拉夫芝娃女神到阿奎萊亞宗主教
+        </h3>
+        <div class="prose prose-invert max-w-none text-stone-300 text-sm sm:text-base leading-relaxed space-y-4 font-serif-tc">
+          <p>
+            布萊德湖坐落於古羅馬諾里庫姆行省（Noricum）與義大利本土第十區（Venetia et Histria）的交界，扼守阿奎萊亞通往艾莫納（Emona，今盧比亞納）與多瑙河流域的要道。其宗教演變清晰地折射了歐洲兩千年的心靈地質層：
+          </p>
+          <div class="grid md:grid-cols-3 gap-4 my-4">
+            <div class="bg-stone-900/90 p-4 rounded-xl border border-stone-800">
+              <div class="text-amber-400 font-bold text-sm mb-1">🏛️ 古羅馬與密特拉教</div>
+              <p class="text-xs text-stone-400 leading-relaxed">
+                西元前 1 世紀至西元 5 世紀：羅馬人結合在地凱爾特水神崇拜，在湖畔祭祀泉水神靈與黛安娜女神；軍商通道上則盛行追求光明的密特拉密教。
+              </p>
+            </div>
+            <div class="bg-stone-900/90 p-4 rounded-xl border border-stone-800">
+              <div class="text-amber-400 font-bold text-sm mb-1">🌿 斯拉夫自然神話與愛神</div>
+              <p class="text-xs text-stone-400 leading-relaxed">
+                西元 6 至 8 世紀：斯拉夫人將特里格拉夫峰視為天地三界之軸，在孤島上立起愛與豐饒女神芝娃（Živa）神廟，湖泊被視為通往神靈界域的聖水。
+              </p>
+            </div>
+            <div class="bg-stone-900/90 p-4 rounded-xl border border-stone-800">
+              <div class="text-amber-400 font-bold text-sm mb-1">✝️ 阿奎萊亞宗主教與同化</div>
+              <p class="text-xs text-stone-400 leading-relaxed">
+                西元 811 年查理曼劃界歸阿奎萊亞管轄。教士採取同化策略，將「斯拉夫愛神芝娃」之母性崇拜轉化為「聖母升天」，和平承接千年島嶼神聖性。
+              </p>
+            </div>
+          </div>
+          <p>
+            隨後的歷史中，16 世紀宗教改革家特魯巴爾在此推動斯洛維尼亞語讀經，而哈布斯堡王朝則以「教宗贈許願鐘（1534 年）」與盛期巴洛克藝術重燃天主教熱忱；到了 19 世紀，瑞士醫生 Rikli 將純淨水氣昇華為高山自然哲學，終將這座島嶼淬鍊為融合神聖信仰與大自然療癒的普世精神地標。
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- 模組三：歷史年表 (Interactive Chronology) -->
+    <section id="chronology" class="scroll-mt-24">
+      <div class="border-l-4 border-amber-500 pl-4 mb-8">
+        <span class="text-xs font-mono uppercase text-amber-400 tracking-wider">Historical Timeline</span>
+        <h2 class="text-2xl sm:text-3xl font-serif-tc font-bold text-stone-100">布萊德許願島千年編年史</h2>
+      </div>
+
+      <div class="relative border-l border-stone-800 ml-4 sm:ml-8 space-y-8 py-4">
+        
+        <!-- 時間節點 1 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-stone-900 border-2 border-amber-500 group-hover:bg-amber-500 transition"></div>
+          <div class="text-xs font-mono text-amber-400">8–10 世紀</div>
+          <h3 class="text-lg font-serif-tc font-bold text-stone-100 mt-0.5">斯拉夫愛神芝娃（Živa）聖廟與早期墓葬</h3>
+          <p class="text-xs text-stone-400 mt-1">古斯拉夫人在島上建立異教祭壇；考古出土 124 座石墓，見證原始信仰與早期基督教化過渡。</p>
+        </div>
+
+        <!-- 時間節點 2 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-stone-900 border-2 border-amber-500 group-hover:bg-amber-500 transition"></div>
+          <div class="text-xs font-mono text-amber-400">1004 年 4 月 10 日</div>
+          <h3 class="text-lg font-serif-tc font-bold text-stone-100 mt-0.5">神聖羅馬帝國皇室采邑封贈</h3>
+          <p class="text-xs text-stone-400 mt-1">皇帝亨利二世將布萊德莊園與湖泊封予布里克森（Brixen）主教阿爾布溫（Albuin），開啟教會管轄時期。</p>
+        </div>
+
+        <!-- 時間節點 3 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-stone-900 border-2 border-amber-500 group-hover:bg-amber-500 transition"></div>
+          <div class="text-xs font-mono text-amber-400">1142 年</div>
+          <h3 class="text-lg font-serif-tc font-bold text-stone-100 mt-0.5">羅曼式三殿聖母大教堂落成</h3>
+          <p class="text-xs text-stone-400 mt-1">阿奎萊亞宗主教佩勒格里諾一世（Pellegrino I）親自祝聖，確立聖母升天朝聖地核心地位。</p>
+        </div>
+
+        <!-- 時間節點 4 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-stone-900 border-2 border-amber-500 group-hover:bg-amber-500 transition"></div>
+          <div class="text-xs font-mono text-amber-400">1465 年</div>
+          <h3 class="text-lg font-serif-tc font-bold text-stone-100 mt-0.5">哥德式重修與聖母生平濕壁畫</h3>
+          <p class="text-xs text-stone-400 mt-1">盧比亞納首任主教 Žiga Lamberg 主持哥德式擴建，52 米獨立鐘樓於此時期奠基。</p>
+        </div>
+
+        <!-- 時間節點 5 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-stone-900 border-2 border-amber-500 group-hover:bg-amber-500 transition"></div>
+          <div class="text-xs font-mono text-amber-400">1534 年</div>
+          <h3 class="text-lg font-serif-tc font-bold text-stone-100 mt-0.5">教宗克萊孟七世（Clement VII）賜贈傳奇許願鐘</h3>
+          <p class="text-xs text-stone-400 mt-1">由帕多瓦工匠鑄造新銅鐘送達島上，開啟延續至今的「連敲三響祈願」朝聖習俗。</p>
+        </div>
+
+        <!-- 時間節點 6 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-stone-900 border-2 border-amber-500 group-hover:bg-amber-500 transition"></div>
+          <div class="text-xs font-mono text-amber-400">1655 / 1698 年</div>
+          <h3 class="text-lg font-serif-tc font-bold text-stone-100 mt-0.5">99 階大階梯建成與巴洛克重生</h3>
+          <p class="text-xs text-stone-400 mt-1">大地震後全面巴洛克化，興建 99 階南側石階、金色主祭壇（1747 年）與教士居所。</p>
+        </div>
+
+        <!-- 時間節點 7 -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-stone-900 border-2 border-amber-500 group-hover:bg-amber-500 transition"></div>
+          <div class="text-xs font-mono text-amber-400">1855 年～現代</div>
+          <h3 class="text-lg font-serif-tc font-bold text-stone-100 mt-0.5">自然療養勝地與斯洛維尼亞國家地標</h3>
+          <p class="text-xs text-stone-400 mt-1">瑞士名醫 Arnold Rikli 推動阿爾卑斯自然水療，成為全歐名流勝地與現代斯洛維尼亞國寶文化遺產。</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 模組四：極東義大利 - 斯洛維尼亞走讀地圖脈絡 -->
+    <section class="bg-gradient-to-r from-stone-950 via-stone-900 to-stone-950 p-6 sm:p-8 rounded-3xl border border-stone-800">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center gap-1 text-xs font-mono text-amber-400 uppercase mb-2">
+            <span>🗺️ 跨境走讀脈絡・Cross-border Spatial Link</span>
+          </div>
+          <h3 class="text-xl font-serif-tc font-bold text-stone-100">
+            極東義大利・弗留利平原與茱莉安阿爾卑斯之交會
+          </h3>
+          <p class="text-xs sm:text-sm text-stone-300 max-w-2xl mt-2 leading-relaxed font-serif-tc">
+            布萊德湖與阿奎萊亞（Aquileia）、望海堡（Miramare）、拉多夫利察（Radovljica）緊密相連。從早期阿奎萊亞宗主教的主權祝聖，到哈布斯堡王朝時期的皇室度假鐵路，布萊德島正是這條跨境靈性與文化廊道的高潮聖境。
+          </p>
+        </div>
+        <div class="shrink-0">
+          <a href="../Aquileia「阿奎萊亞」/index.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-semibold rounded-xl border border-stone-700 transition">
+            <span>← 查看阿奎萊亞專題</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="bg-stone-950 border-t border-stone-800/80 py-12 text-center text-xs text-stone-500 font-mono">
+    <div class="max-w-4xl mx-auto px-4 space-y-3">
+      <p class="text-stone-400 font-serif-tc">數位策展深旅・極東義大利與斯洛維尼亞跨境文化專題</p>
+      <p>Bled Island (Blejski Otok) & Church of the Assumption Digital Exhibition</p>
+      <p class="text-[11px] text-stone-600">Archival photography via Wikimedia Commons (CC-BY-SA / Public Domain) & Field Curatorial Research</p>
+    </div>
+  </footer>
+
+  <!-- Web Audio API 鐘聲合成器與互動腳本 -->
+  <script>
+    let bellRings = 0;
+    let audioCtx = null;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    // 利用 Web Audio API 物理合成真實教堂大鐘諧波
+    function synthesizeChurchBell() {
+      const ctx = getAudioContext();
+      const now = ctx.currentTime;
+      
+      // 鐘聲基頻與諧波比 (Church bell strike tones & hum)
+      const baseFreq = 392.0; // G4
+      const partials = [
+        { freqRatio: 0.5,  gain: 0.35, decay: 4.5 }, // Hum tone (低頻回響)
+        { freqRatio: 1.0,  gain: 0.70, decay: 3.2 }, // Prime (主音)
+        { freqRatio: 1.19, gain: 0.50, decay: 2.5 }, // Tierce (小三度)
+        { freqRatio: 1.5,  gain: 0.40, decay: 2.0 }, // Quint (純五度)
+        { freqRatio: 2.0,  gain: 0.30, decay: 1.5 }, // Nominal (八度音)
+        { freqRatio: 2.76, gain: 0.20, decay: 0.9 }, // Superquint
+        { freqRatio: 4.07, gain: 0.15, decay: 0.5 }  // High strike transient
+      ];
+
+      const masterGain = ctx.createGain();
+      masterGain.gain.setValueAtTime(0.8, now);
+      masterGain.connect(ctx.destination);
+
+      partials.forEach(p => {
+        const osc = ctx.createOscillator();
+        const gainNode = ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(baseFreq * p.freqRatio, now);
+
+        // 擊槌瞬態與衰減包絡
+        gainNode.gain.setValueAtTime(0.001, now);
+        gainNode.gain.exponentialRampToValueAtTime(p.gain, now + 0.008);
+        gainNode.gain.exponentialRampToValueAtTime(0.0001, now + p.decay);
+
+        osc.connect(gainNode);
+        gainNode.connect(masterGain);
+
+        osc.start(now);
+        osc.stop(now + p.decay);
+      });
+    }
+
+    function ringWishingBell() {
+      bellRings++;
+      document.getElementById('bell-count').innerText = bellRings;
+      
+      // 繩索拉扯動畫
+      const rope = document.getElementById('rope-graphic');
+      rope.classList.remove('pull');
+      void rope.offsetWidth; // trigger reflow
+      rope.classList.add('pull');
+
+      // 播放 Web Audio API 鐘聲
+      synthesizeChurchBell();
+
+      // 反饋提示
+      const feedback = document.getElementById('bell-feedback');
+      const messages = [
+        "第 1 響：願心靈如鏡湖般澄清。",
+        "第 2 響：願愛如 99 階天梯般堅貞恆久。",
+        "第 3 響：教宗克萊孟七世的祝福與願望已隨鐘聲抵達阿爾卑斯天際！✨",
+        "願望迴盪於湖面與山谷之間，心誠則靈..."
+      ];
+      
+      const msgIndex = Math.min(bellRings - 1, messages.length - 1);
+      feedback.innerText = messages[msgIndex];
+    }
+  </script>
+</body>
+</html>
